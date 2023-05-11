@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    
+    <title>game</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center;"> 
+
+    <!-- full game screen -->
+    <div style="position: relative; display: inline-block;">
+
+        <!-- game info -->
+        <div style="position: absolute; display: flex; width: 100%; align-items: center; justify-content: center; padding: 20px;">
+
+            <!--player health -->
+            <div style="position: relative; border-top: solid 2px white; border-bottom: solid 2px white; border-left: solid 2px white; width: 100%; display: flex; justify-content: flex-end;">
+                <div  style="background-color: red; height: 15px; width: 100%;"></div>
+                <div id="playerHealth" style="position: absolute; background: #818cf8; top: 0; right: 0; bottom: 0; width: 100%;"></div>
+            </div>
+
+            <!-- timer -->
+            <div id="timer" style="background-color: black; border: 2px solid white; color: white; width: 20%; height: 30px; flex-shrink: 0; display: flex; justify-content: center; align-items: center;">
+                10
+            </div>
+
+            <!-- enemy health -->
+            <div style="position: relative; border-top: solid 2px white; border-bottom: solid 2px white; border-right: solid 2px white; width: 100%;">
+                <div  style="background-color: red; height: 15px;"></div>
+                <div id="enemyHealth" style="position: absolute; background: #818cf8; top: 0; left: 0; right: 0; bottom: 0;"></div>
+            </div>
+
+        </div>
+
+        <!-- displayText -->
+        <div id="displayText" style="position: absolute; color: white; top: 0; right: 0; bottom: 0; left: 0; display: none; justify-content: center; align-items: center;"></div>
+        
+        <canvas></canvas>
+
+        <div class="controls" style="display: flex;">
+            <div>
+                <ul>
+                    <li>Samurai</li>
+                    <li>a : left</li>
+                    <li>d : right</li>
+                    <li>w : jump</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Ninja</li>
+                    <li>arrow left</li>
+                    <li>arrow right</li>
+                    <li>arrow up: jump</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/classes.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
